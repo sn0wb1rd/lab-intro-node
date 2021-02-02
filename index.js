@@ -56,12 +56,7 @@ class SortedList {
 
   avg() {
     if (this.length != 0){
-      // return sum() / this.length // does not work?!
-      let sumNbr = this.items.reduce(function (accumulator, currentValue){
-        accumulator += currentValue
-        return accumulator;
-      }, 0);
-      return sumNbr / this.length
+      return this.sum() / this.length
     }
     else {
       throw new Error('EmptySortedList');
