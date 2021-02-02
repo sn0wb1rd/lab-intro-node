@@ -2,7 +2,7 @@ class SortedList {
   constructor() {
     this.items = []
     this.length = 0
-  }
+  };
 
   add(item) {
     this.items.push(item)
@@ -12,7 +12,7 @@ class SortedList {
   
     this.length = this.items.length
     return this.items
-    }
+  };
 
   get(pos) {
     if (!(this.items.indexOf(pos) === -1)){
@@ -52,7 +52,7 @@ class SortedList {
     else {
       return 0
     }
-  }
+  };
 
   avg() {
     if (this.length != 0){
@@ -62,16 +62,11 @@ class SortedList {
         return accumulator;
       }, 0);
       return sumNbr / this.length
-
-
     }
     else {
       throw new Error('EmptySortedList');
-    }
-    
-
-
-  }
-}
+    };
+  };
+};
 
 module.exports = SortedList;
